@@ -139,7 +139,7 @@ customPDE<dim, degree>::explicitEquationRHS(
   //Random perturbation term
 
   srand(time(NULL));  // Initialize the random number generator
-  double random_number = rand() / (RAND_MAX + 1) - 0.5;  // Generates a random number between -0.5 and 0.5
+  double random_number = rand() / RAND_MAX - 0.5;  // Generates a random number between -0.5 and 0.5
   scalarvalueType rand_nose;
   rand_nose = eta * random_number * sqrt(constV(userInputs.dtValue));
 
